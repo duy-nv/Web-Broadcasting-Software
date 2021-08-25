@@ -14,8 +14,8 @@
     "test": "standard --fix src/* && tape test/*.js",
     "build": "browserify src/index.js -t browserify-css -s WBS -o dist/wbs.js",
     "watch": "watchify src/index.js -t browserify-css -s WBS -o dist/wbs.js",
-    "dev": "cross-env NODE_ENV=development webpack serve",
-    "preview": "npm run watch && cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js"
+    "serve": "cross-env NODE_ENV=development webpack serve",
+    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js && npm run watch"
   },
   "author": "Thomas Mullen",
   "license": "MIT",
